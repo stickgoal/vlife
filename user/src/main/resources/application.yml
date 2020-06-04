@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: user
+  jackson:
+    date-format: yyyy-mm-dd hh:MM:ss
+  datasource:
+    url: jdbc:mysql://localhost:3306/vlife_user
+    username: root
+    password: root123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    generate-ddl: false
+server:
+  port: 8002
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka/
+
+

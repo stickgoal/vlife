@@ -9,6 +9,9 @@ Vue.use(ElementUI)
 
 Vue.prototype.$ax=axios
 
+axios.defaults.baseURL="http://localhost:9000"
+axios.defaults.headers.common['auth_token']=localStorage.authToken;
+
 Vue.config.productionTip = false
 
 

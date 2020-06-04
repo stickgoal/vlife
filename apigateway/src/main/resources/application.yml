@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: apigateway
+  jackson:
+    date-format: yyyy-mm-dd hh:MM:ss
+server:
+  port: 9000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka/
+
+zuul:
+  routes:
+    login-route:
+      path: /login
+      service-id: user
+    movie-route:
+      path: /movie/**
+      service-id: movie
+  ignored-services: review,user

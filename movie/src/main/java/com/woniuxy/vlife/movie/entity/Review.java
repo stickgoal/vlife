@@ -13,14 +13,16 @@ public class Review {
 
     private int reviewId;
 
+    private int movieId;
+
     private String content;
 
     private int userId;
 
     private String username;
 
+    private String avatar;
+
     private Date publishDate;
-
-
 
 }

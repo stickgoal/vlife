@@ -38,7 +38,8 @@
             }
         },
         mounted: function() {
-            this.$ax.get("http://localhost:8080/movie/movies").then(
+            console.log(this.$ax.defaults);
+            this.$ax.get("/movie/movies").then(
               (res)=> {
                     console.log(res);
                     this.movies = res.data;

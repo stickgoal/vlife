@@ -3,9 +3,18 @@ spring:
     date-format: yyyy-mm-dd hh:MM:ss
   application:
     name: movie
+  datasource:
+    url: jdbc:mysql://localhost:3306/vlife_movie
+    username: root
+    password: root123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    generate-ddl: false
+  mvc:
+    converters:
+      preferred-json-mapper: jackson
 server:
   port: 8000
-
 eureka:
   client:
     service-url:

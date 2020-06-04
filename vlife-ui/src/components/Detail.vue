@@ -10,7 +10,9 @@
                         <el-card class="box-card" body-style="text-align:left;">
 
                         <el-row gutter="20">
+
                             <el-col :span="6">
+                                <img style="width:48px;height:48px" :src="v.avatar" alt="v.username">
                                 {{v.username}}
                             </el-col>
                             <el-col :span="18" style="text-align:right">
@@ -40,7 +42,7 @@
         },
         mounted() {
 
-            this.$ax.get("http://localhost:8080/movie/detail?movieId=" + this.$route.params.id).then(
+            this.$ax.get("/movie/detail?movieId=" + this.$route.params.id).then(
                 (res) => {
                     this.movie = res.data;
                 }
